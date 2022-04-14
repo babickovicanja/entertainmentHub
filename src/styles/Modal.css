@@ -20,7 +20,7 @@
 
 .modal-poster-landscape {
   object-fit: cover;
-  object-position: 100% 0;
+  object-position: 50% 50%;
   width: 100%;
   max-height: 415px;
   border-radius: 10px;
