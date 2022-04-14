@@ -1,0 +1,36 @@
+.navigation {
+  width: 100%;
+  bottom: 0;
+  z-index: 160;
+  position: fixed;
+  background-color: #2d313a;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anticon {
+  padding-bottom: 5px;
+}
+
+.anticon svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@media (min-width: 500px) {
+  .nav-link {
+    padding: 20px 30px;
+    transition: 1s;
+  }
+}

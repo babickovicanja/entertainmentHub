@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #39445a;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+  font-size: 5vw;
+  padding: 10px 0 15px;
+  box-shadow: 0 1px 5px #000;
+  color: #fff;
+  z-index: 100;
+}
+
+.header p {
+  margin: 0; 
+}

@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+}
+
+.movies {
+  background-color: #39445a;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+}
+
+.title {
+  padding: 80px 0 10px;
+  text-align: center;
+  font-family: "Montserrat",sans-serif;
+  font-size: 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+}
+
+.genres-container {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genres button {
+  height: 24px;
+  border-radius: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  margin: 2.5px;
+  cursor: pointer;
+}
+
+.ant-pagination {
+  display: flex;
+  justify-content: center;
+  z-index: 150;
+}
+
+.ant-pagination-prev, .ant-pagination-next, .ant-select-selector, .ant-pagination-options {
+  display: none !important;
+}
+
+.ant-pagination-item-link-icon {
+  color: white !important;
+  background-color: #303f9f !important;
+  padding: 7px;
+  border-radius: 15px !important;
+}
+
+.ant-pagination-item {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+}
+
+.ant-pagination-item a, .ant-pagination-item-ellipsis {
+  color: white !important;
+}
+
+.ant-pagination-item-active, .ant-pagination-item:hover {
+  background-color: #303f9f !important;
+  border-radius: 15px !important;
+}
+
+.selected {
+  color: #fff !important;
+  background-color: #3f51b5;
+}
+
+@media (min-width: 700px) {
+  .title {
+    font-size: 2vw;
+    padding: 130px 0 10px;
+    transition: 1s;
+  }
+}
+
+@media (min-width: 1300px) {
+  .title {
+    padding: 180px 0 10px !important;
+  }
+}
+
+@media (min-width: 2100px) {
+  .title {
+    padding: 230px 0 10px !important;
+  }
+}
