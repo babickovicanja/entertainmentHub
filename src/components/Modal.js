@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react"
+
 import { YoutubeOutlined } from "@ant-design/icons"
+import Slider from "react-slick"
 
 import "../styles/Modal.css"
 
@@ -40,6 +42,18 @@ function Modal({id, mediaType}) {
     console.log(mediaType)
   }, [id])
   
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+  };
+
+  // if(window.screen.width < )
 
   return ( 
         <div key={id} className="modal">
@@ -53,8 +67,8 @@ function Modal({id, mediaType}) {
               {modalData.overview}
             </div>
 
-            <div className="modal-carousel-wrapper">
-              {carouselData && carouselData.cast && carouselData.cast.slice(0, 5).map(actor => {
+            <Slider {...settings} className="modal-carousel-wrapper">
+              {carouselData && carouselData.cast && carouselData.cast.map(actor => {
                 return (
                   <div className="carousel-item">
                     <img src={`https://image.tmdb.org/t/p/w300/${actor.profile_path}`} />
@@ -62,7 +76,7 @@ function Modal({id, mediaType}) {
                   </div>
                 )
               })}
-            </div>
+            </Slider>
 
             { youtubeData && <a href={`https://www.youtube.com/watch?v=${youtubeData.key}`} className="modal-button" ><YoutubeOutlined className="modal-button-icon"/> WATCH THE TRAILER</a>}
 

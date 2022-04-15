@@ -1,3 +1,7 @@
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .modal {
   color: white;
   width: 90%;
@@ -97,33 +101,44 @@
 }
 
 .modal-carousel-wrapper {
-
   padding: 20px 10px;
   width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow-x: scroll;
-  overflow-y: scroll;
 }
 
 .carousel-item {
-  max-width: 100px;
-  padding: 10px 15px;
+  width: unset !important;
+  min-width: 100px;
+  max-width: 300px;
+  padding: 0 15px;
 }
 
 .carousel-item img {
-  height: 120px;
+  width: fit-content;
+  max-width: 200px;
+  min-height: 60px;
+  height: 60px;
+  max-height: 220px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   box-shadow: 0 0 5px #000;
 }
 
 .carousel-item p {
-  width: 100%;
-  height: 100%;
-  overflow-x:scroll;
+  font-size: 10px;
+  width: 70%;
+
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.slick-arrow {
+  display: none !important;
 }
 
 .overlay {
@@ -141,6 +156,16 @@
   pointer-events: all;
   z-index: 110;
   opacity: 1;
+}
+
+@media (min-width: 500px) {
+  .carousel-item img {
+    height: 100px;
+  }
+
+  .carousel-item p {
+    font-size: 14px;
+  }
 }
 
 

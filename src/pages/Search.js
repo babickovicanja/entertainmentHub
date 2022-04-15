@@ -63,12 +63,11 @@ function Search() {
         </div>
       </div>
       {displaySearchData 
-      ? <Pagination
+      && <Pagination
         defaultCurrent={1}
         total={100}
         onChange={(value) => setCurrentPage(value)}
-      /> 
-      : <div className="empty-div"></div>}
+      /> }
       <div
         className={isModalVisible ? "overlay show" : "overlay"}
         onClick={() => toggleModal(false)}
